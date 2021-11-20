@@ -1,0 +1,308 @@
+@charset "UTF-8";
+ 
+.screen   {
+  display: normal; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: -1px; /* Place the button at the bottom of the page */
+  /*right: -11px;  Place the button 30px from the right */
+  left: -1px; /* Place the button 30px from the right */
+  z-index:  299; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: red; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: auto; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  width:100%;
+  /*    height:58px;*/
+}
+.screen nav {
+  position: absolute;
+  width: 100%;
+  height: 78px;
+  bottom: 0;
+  border-top: 1px solid lightgray;
+  padding-top: 8px;
+  background-color: white;
+}
+.screen nav .back {
+  padding: 10px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid lightgray;
+  text-align: center;
+  margin: 10px 0 0 10px;
+  border-radius: 50%;
+  background-image: url("http://icons.iconarchive.com/icons/iconsmind/outline/48/Back-2-2-icon.png");
+  background-size: 35px;
+  background-repeat: no-repeat;
+}
+.screen nav > ul > li {
+  float: left;
+  display: block;
+  list-style-type: none;
+  width: 20%;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center 0;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.screen nav > ul > li:focus {
+  outline: 0;
+  outline: none;
+}
+.screen nav > ul > li:hover {
+   -o-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -webkit-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}
+.screen nav > ul > li span {
+  position: absolute;
+  bottom: 2px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  height: 18px;
+}
+.screen nav > ul > li.home {
+  background-image: url("../images/home-icon.png");
+}
+.screen nav > ul > li.about {
+  background-image: url("../images/settings-3-icon.png");
+}
+.screen nav > ul > li.blog {
+  background-image: url("../images/email-icon.png");
+}
+.screen nav > ul > li.email {
+  background-image: url("../images/Mail-icon.png");
+}
+.screen nav > ul > li.contact {
+  background-image: url("../images/contact-icon.png");
+}
+
+.screen nav > ul > li.misc {
+  background-image: url("../images/folder-icon.png");
+}
+.screen nav > ul > li.phone-sms {
+  background-image: url("../images/sms-icon.png");
+}
+.screen nav > ul > li.line {
+  background-image: url("../images/LINE_APP.png");
+}
+.screen nav > ul > li.phone {
+  background-image: url("../images/phone-icon.png");
+}
+.screen nav > ul > li.facebook {
+  background-image: url("../images/facebook-icon.png");
+  color: #3b5998;
+}
+.screen nav > ul > li.twitter {
+  background-image: url("../images/Twitter-icon.png");
+  color: #3e9ef8;
+}
+
+
+
+.screen nav > ul > li .submenu, .screen nav > ul > li .submenu2 {
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 69px;
+  left: 100%;
+  transition: all 0.2s linear;
+  border-top: 1px solid lightgray;
+}
+.screen nav > ul > li .submenu.opacity, .screen nav > ul > li .submenu2.opacity {
+  opacity: 0;
+}
+.screen nav > ul > li .submenu.show, .screen nav > ul > li .submenu2.show {
+  left: 0;
+}
+.screen nav > ul > li .submenu.hide, .screen nav > ul > li .submenu2.hide {
+  left: -100%;
+}
+.screen nav > ul > li .submenu li, .screen nav > ul > li .submenu2 li {
+  width: 100%;
+  padding: 10px;
+}
+.screen nav > ul > li .submenu li.has-submenu:after, .screen nav > ul > li .submenu2 li.has-submenu:after {
+  content: "➤";
+  padding-left: 15px;
+  font-weight: bold;
+}
+ 
+  /* default styles here for older browsers. 
+       I tend to go for a 600px - 960px width max but using percentages
+    */
+    @media only screen and (min-width: 960px) {
+        /* styles for browsers larger than 960px; */
+    }
+    @media only screen and (min-width: 1440px) {
+        /* styles for browsers larger than 1440px; */
+    }
+    @media only screen and (min-width: 2000px) {
+        /* for sumo sized (mac) screens */
+    }
+    @media only screen and (max-device-width: 480px) {
+       /* styles for mobile browsers smaller than 480px; (iPhone) */
+    }
+    @media only screen and (device-width: 768px) {
+       /* default iPad screens */
+    }
+    /* different techniques for iPad screening */
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+      /* For portrait layouts only */
+    }
+
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+      /* For landscape layouts only */
+    }
+
+	@media screen and (max-width:544px) {
+		.screen nav {
+		  position: absolute;
+		  width: 100%;
+		  height: 45px;
+		  bottom: 0;
+		  border-top: 1px solid lightgray;
+		  padding-top: 8px;
+		  background-color: white;
+		}  
+	}
+ /* ------------------------ Css For Button Right -------------------------------------------------------------------*/
+.bbx-social-button {
+  transition: all 0.4s;
+  position: fixed;
+  right: 10px;
+  bottom: 25px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+ 
+  border-radius: 50%;
+  background-color: #2186ECAB;
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition-delay: 1s;
+  z-index: 1000;
+}
+ 
+ 
+.bbx-social-button-open {
+  transition-delay: 0s;
+  bottom: 85px;
+  background-color: #d81558;
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+.bbx-social-button .bbx-social-point{
+  transition: all 0.4s;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  visibility: hidden;
+}
+.bbx-social-button .bbx-social-point:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+}
+.bbx-social-button .bbx-social-point:nth-child(2) {
+  transition-delay: 0.3s;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  background-color: #25D366;
+}
+.bbx-social-button .bbx-social-point:nth-child(3) {
+  transition-delay: 0.4s;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  background-color: #DC4E41;
+}
+.bbx-social-button .bbx-social-point:nth-child(4) {
+  transition-delay: 0.5s;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  background-color: #49a942;
+}
+.bbx-social-button .bbx-social-point:nth-child(5) {
+  transition-delay: 0.6s;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  background-color: #1da1f2;
+}
+.bbx-social-button .bbx-social-point:nth-child(6) {
+  transition-delay: 0.7s;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  background-color: #3b5998;
+}
+
+.bbx-social-button-open .bbx-social-point-open{
+  opacity: 1;
+  width: 50px;
+  height: 50px;
+  visibility: visible;
+}
+.bbx-social-button-open .bbx-social-point-open:nth-child(2) {
+  right: 5px;
+  bottom: 80px;
+}
+.bbx-social-button-open .bbx-social-point-open:nth-child(2):hover {
+  transition-delay: 0s;
+  background-color: #1EA551;
+}
+.bbx-social-button-open .bbx-social-point-open:nth-child(3) {
+  right: 65px;
+  bottom: 65px;
+}
+.bbx-social-button-open .bbx-social-point-open:nth-child(3):hover {
+  transition-delay: 0s;
+  background-color: #B14237;
+}
+.bbx-social-button-open .bbx-social-point-open:nth-child(4) {
+  right: 80px;
+  bottom: 5px;
+}
+.bbx-social-button-open .bbx-social-point-open:nth-child(4):hover {
+  transition-delay: 0s;
+  background-color: #3D8937;
+}
+.bbx-social-button-open .bbx-social-point-open:nth-child(5) {
+  right: 65px;
+  bottom: -65px;
+}
+.bbx-social-button-open .bbx-social-point-open:nth-child(5):hover {
+  transition-delay: 0s;
+  background-color: #1980BF;
+}
+.bbx-social-button-open .bbx-social-point-open:nth-child(6) {
+  right: 5px;
+  bottom: -80px;
+}
+.bbx-social-button-open .bbx-social-point-open:nth-child(6):hover {
+  transition-delay: 0s;
+  background-color: #2F4575;
+}

@@ -1,0 +1,67 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<extension type = "module" version = "3.1.0" client = "site" method="upgrade">
+
+   <name>bb Button Mobile</name>
+   <author>bb Button Mobile</author>
+   <version>12.02.2019</version>
+   <description>A bb Module Button Mobile! For joomla Web school</description>
+	<author>Joomla! Project</author>
+	<creationDate>Nov 2020</creationDate>
+	<copyright>Copyright (C) 2020 - 2020 Open Source Matters. All rights reserved.</copyright>
+	<license> License  By Boxs.me</license>
+	<authorEmail>boxsanook1@gmail.com</authorEmail>
+	<authorUrl>www.boxs.me</authorUrl>
+ 
+   <files>
+		<filename>mod_bb_module_mobile.xml</filename>
+		<filename module = "mod_bb_module_mobile">mod_bb_module_mobile.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>mod_bb_module_mobile.png</filename>
+		<folder>css</folder>
+		<filename>css/style.css</filename>
+		<filename>css/index.html</filename>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>tmpl</folder>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+   </files>
+	
+   <config>
+   <fields name="params">
+   
+			<fieldset name="basic" label="Module"> 
+			<field name="mylistteam" type="list" default="" required="true" label="Select an option" description="">
+			  <option value="">Please Select</option>
+			  <option value="0">botton side</option>
+			  <option value="1">button left</option>
+			</field>
+			
+				<field name="txtPhone" type="text" label="Phone" description="Phone" />
+				<field name="txtLine" type="text" label="Line ID " description="Line ID" />
+				<field name="txtFacebook" type="text" label="Facebook Link" description="Link to the Facebook page." />
+				<field name="txtTwitter" type="text" label="Twitter Link" description="Link to the Twitter page." />
+				<field name="txtEmail" type="email" label="Email" description="Email to Contact" />
+				 
+			 
+				<field name="mobile" type="radio" default="0" label="Show an mobile" description="" class="btn-group btn-group-yesno">
+				  <option value="1">JYES</option>
+				  <option value="0">JNO</option>
+				</field>
+				<field name="tablest" type="radio" default="0" label="Show an tablest" description="" class="btn-group btn-group-yesno">
+				  <option value="1">JYES</option>
+				  <option value="0">JNO</option>
+				</field>
+				<field name="desktop" type="radio" default="0" label="Show an desktop" description="" class="btn-group btn-group-yesno">
+				  <option value="1">JYES</option>
+				  <option value="0">JNO</option>
+				</field> 
+			</fieldset>
+			
+			  
+		</fields>
+	</config>
+	
+</extension>
