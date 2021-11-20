@@ -184,7 +184,7 @@
   transition: all 0.4s;
   position: fixed;
   right: 10px;
-  bottom: 25px;
+  bottom: 250px;
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -203,7 +203,7 @@
  
 .bbx-social-button-open {
   transition-delay: 0s;
-  bottom: 85px;
+  //bottom: 85px;
   background-color: #d81558;
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
 }
